@@ -25,6 +25,7 @@
         scope.titleLabel = scope.inputObj.titleLabel ? (scope.inputObj.titleLabel) : 'Select Date';
         scope.todayLabel = scope.inputObj.todayLabel ? (scope.inputObj.todayLabel) : 'Today';
         scope.closeLabel = scope.inputObj.closeLabel ? (scope.inputObj.closeLabel) : 'Close';
+        scope.clearLabel = scope.inputObj.clearLabel ? (scope.inputObj.clearLabel) : 'Clear';
         scope.setLabel = scope.inputObj.setLabel ? (scope.inputObj.setLabel) : 'Set';
         scope.errorMsgLabel = scope.inputObj.errorMsgLabel ? (scope.inputObj.errorMsgLabel) : 'Please select a date.';
         scope.setButtonType = scope.inputObj.setButtonType ? (scope.inputObj.setButtonType) : 'button-positive';
@@ -262,6 +263,11 @@
         //Called when the user clicks on the Set' button of the modal
         scope.setIonicDatePickerDate = function () {
           dateSelected();
+          scope.closeModal();
+        };
+        //Called when the user clicks on the Set' button of the modal
+        scope.clearIonicDatePickerDate = function () {
+          scope.inputObj.callback(null);
           scope.closeModal();
         };
 
