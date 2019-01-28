@@ -267,7 +267,7 @@
         };
         //Called when the user clicks on the Set' button of the modal
         scope.clearIonicDatePickerDate = function () {
-          scope.inputObj.callback(null);
+          scope.inputObj.callback('');
           scope.closeModal();
         };
 
